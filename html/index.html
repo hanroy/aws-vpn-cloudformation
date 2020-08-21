@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: LIGHTYELLOW;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: LIGHTYELLOW;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #FAFAD2;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Amazon Web Services Tips & Tricks</h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>How to publish a blog using AWS</h2>
+      <h5>AWS can guarantee amazing speeds for serving a blog - it supports HTTP2, IPv6, caching and has free TLS certificates. Check out how I do it for this blog.
+</h5>
+      
+      <img src="build-process.svg" class="fakeimg" style="height:200px;">
+     <h5>How it looks</h5>
+ <p>The whole process of delivering the content of my blog is based on four steps:</p>
+<ol>
+  <li>create the content (markdown)</li>
+  <li>build and publish the content (send generated HTML to somewhere)</li>
+  <li>serve the build result (accept connections and serve HTML)</li>
+  <li>invalidating old objects in the edge caches</li>
+</ol>
+    </div>
+    <div class="card">
+      <h2>10 tips & tricks for a smooth start with Amazon Web Services</h2>
+      <h5>Title description, Sep 2, 2017</h5>
+
+            <img src="aws-tips-and-tricks.png" class="fakeimg" style="height:300px;">
+      
+      <p>Diving into a new technology is exciting. The following tips and tricks will accelerate your start with AWS and help you to avoid common pitfalls. You’ll learn about best practices for security in the cloud as well as possibilities to control costs of your AWS account. .</p>
+<ol>
+  <li>Enable MFA for root user</li>
+  <li>Create a billing alarm</li>
+  <li>Get familiar with Identity and Access Management</li>
+  <li>Make use of the Free Tier</li>
+  <li>Choose a region</li>
+  <li>Enable CloudTrail</li>
+  <li>Learn about essential services</li>
+  <li>Install and configure the AWS Command Line Interface (CLI)</li> 
+  <li>Aim for automation</li>
+  <li>Consult the Trusted Advisor</li>
+</ol>
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About the company</h2>
+     <img src="brain.jpg" class="fakeimg" style="width:200px;"> 
+      
+  </div>
+</div>
+
+
+
+</body>
+</html>
+
